@@ -1,7 +1,6 @@
 const Product = require("./../../models/products");
 
 const data = require("./../../data/productData");
-
 exports.seedProducts = async (request, response) => {
   try {
     await Product.remove({});
