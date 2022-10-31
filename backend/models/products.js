@@ -16,13 +16,7 @@ const productSchema = mongoose.Schema({
   category: {
     type: String,
     enum: {
-      values: [
-        "casuals",
-        "sandals&slides",
-        "athletic",
-        "boots",
-        "running shoes",
-      ],
+      values: ["Sneakers", "Sandals&Slides", "Soccer", "Golf"],
     },
   },
   color: {
@@ -34,7 +28,7 @@ const productSchema = mongoose.Schema({
     required: [true],
   },
   image: {
-    type: String,
+    type: [String],
   },
 });
 const Product = new mongoose.model("Product", productSchema);

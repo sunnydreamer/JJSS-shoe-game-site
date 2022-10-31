@@ -1,4 +1,5 @@
 const Product = require("./../../models/products");
+
 const data = require("./../../data/productData");
 
 exports.seedProducts = async (request, response) => {
@@ -7,6 +8,7 @@ exports.seedProducts = async (request, response) => {
     const newProduct = await Product.insertMany(data.shoeData);
     // console.log(shoeData.shoeData);
 
+    // console.log("hello");
     response.status(201).json({
       status: "success",
       data: { newProduct },
