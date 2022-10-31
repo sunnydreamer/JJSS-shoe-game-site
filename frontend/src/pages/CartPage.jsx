@@ -49,14 +49,6 @@ function CartPage({ cart, setCart }) {
     setCart(arr);
   };
 
-  // const handleChange = (element, d) => {
-  //   const ind = cart.indexOf(element);
-  //   const arr = cart;
-  //   arr[ind].amount += d;
-
-  //   if (arr[ind].amount === 0) arr[ind].amount = 1;
-  //   setCart([...arr]);
-  // };
 
   // google pay end
   const navigate = useNavigate();
@@ -66,18 +58,15 @@ function CartPage({ cart, setCart }) {
         return (
           <>
             <div className="cartcomponents">
-              {/* <button className="cartbutton" onClick={() => handleChange(element, -1)}>-</button> */}
               <div className="cartnamedisplay">{element.name}</div>
               <div>{element.color}</div>
               <div>${element.price}</div>
-              {/* <button className="cartbutton" onClick={() => handleChange(element, 1)}>+</button> */}
               <button
                 className="cartbutton"
                 onClick={() => handleRemove(element)}
               >
                 Remove
               </button>
-              {/* <a style={}>Delete</a> */}
 
               <br />
             </div>
